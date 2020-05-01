@@ -35,6 +35,9 @@
 <script type="text/javascript"> var OriginTitile = document.title, st; 
 document.addEventListener("visibilitychange", function () { document.hidden ? (document.title = "Σ(っ °Д °;)っ喔哟，崩溃啦！", clearTimeout(st)) : (document.title = "φ(゜▽゜*)♪咦，又好了！", st = setTimeout(function () { document.title = OriginTitile }, 3e3)) }) </script>
 
+<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+<script type="text/javascript" src="/js/fireworks.js"></script>
 
 <body>
     <header class="navbar-fixed">
@@ -413,7 +416,7 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
             
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">10</span>&nbsp;字
+                class="white-color">62</span>&nbsp;字
             
             
             
@@ -521,8 +524,6 @@ $(function () {
     })();
 </script>
 
-    
-    <script src="/libs/others/clicklove.js" async="async"></script>
     
     
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
