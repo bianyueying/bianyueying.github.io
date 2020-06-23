@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, 萌新求带">
+    <meta name="keywords" content="Redis缓存, 萌新求带">
     <meta name="description" content="嗯哼">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | 萌新求带</title>
+    <title>Redis缓存 | 萌新求带</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -230,12 +230,12 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">Redis缓存</h1>
                 </div>
             </div>
         </div>
@@ -360,8 +360,12 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Hexo/">
-                                <span class="chip bg-color">Hexo</span>
+                            <a href="/tags/Java/">
+                                <span class="chip bg-color">Java</span>
+                            </a>
+                        
+                            <a href="/tags/%E8%BD%AC%E8%BD%BD/">
+                                <span class="chip bg-color">转载</span>
                             </a>
                         
                     </div>
@@ -372,8 +376,12 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                前端
+                            <a href="/categories/%E5%90%8E%E7%AB%AF/" class="post-category">
+                                后端
+                            </a>
+                        
+                            <a href="/categories/%E5%90%8E%E7%AB%AF/%E7%BC%93%E5%AD%98/" class="post-category">
+                                缓存
                             </a>
                         
                     </div>
@@ -385,7 +393,7 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-30
+                    2020-06-23
                 </div>
                 
 
@@ -394,14 +402,14 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    62
+                    875
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -416,7 +424,84 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Hello"><a href="#Hello" class="headerlink" title="Hello"></a>Hello</h1><p>你好哇，很高兴见到你！</p>
+                <h3 id="Redis知识点复习"><a href="#Redis知识点复习" class="headerlink" title="Redis知识点复习"></a>Redis知识点复习</h3><h4 id="什么是Redis"><a href="#什么是Redis" class="headerlink" title="什么是Redis"></a>什么是Redis</h4><ul>
+<li><p>非关系型（NoSQL）键值对数据库</p>
+</li>
+<li><p>可存储键和五种不同类型的值之间的映射，键只能是字符串，值有5种数据类型：字符串（String）、列表（list）、集合（set）、散列表（Hash）、有序集合（Zset）。</p>
+</li>
+</ul>
+<h4 id="Redis持久化"><a href="#Redis持久化" class="headerlink" title="Redis持久化"></a>Redis持久化</h4><p>​    持久化即是内存的数据写到磁盘中去，防止服务宕机，内存数据丢失</p>
+<h5 id="RDB：Redis-DataBase（默认方式）"><a href="#RDB：Redis-DataBase（默认方式）" class="headerlink" title="RDB：Redis DataBase（默认方式）"></a>RDB：Redis DataBase（默认方式）</h5><ul>
+<li>按照一定的时间间隔将内存中的数据以快照的方式保存到硬盘中，产生对应的数据文件为dump.rdb</li>
+<li>优点：<ul>
+<li>只有一个文件，方便持久化</li>
+<li>性能最大化：单独子进程来进行持久化，主线程不会进行任何IO操作，保证性能。</li>
+</ul>
+</li>
+<li>缺点：<ul>
+<li>安全性低：如果持久化时 redis 发生故障，会造成数据丢失（更适合数据要求不严谨时)</li>
+</ul>
+</li>
+</ul>
+<h5 id="AOF：Append-Only-File（需手动开启）"><a href="#AOF：Append-Only-File（需手动开启）" class="headerlink" title="AOF：Append Only File（需手动开启）"></a>AOF：Append Only File（需手动开启）</h5><ul>
+<li><p>将每次Redis执行的命令记录到单独的日志文件中，重启Redis时会根据该文件恢复数据。</p>
+</li>
+<li><p>两种方式同时开启时，数据恢复Redis会优先选择AOF恢复</p>
+</li>
+<li><p>优点：</p>
+<ul>
+<li>数据安全：每执行一次命令就可以记录操作一次。</li>
+</ul>
+</li>
+<li><p>缺点：</p>
+<ul>
+<li><p>因为要记录所有执行命令，所以文件要比rdb大，恢复速度慢</p>
+</li>
+<li><p>数据集大的时候，比rdb启动效率低。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="Redis主从架构"><a href="#Redis主从架构" class="headerlink" title="Redis主从架构"></a>Redis主从架构</h4><p>主从架构：一主多从，主负责写，并将数据复制到其他的从节点，从负责读。所有的读请求全部走从节点，这样易实现水平扩容，支撑读高并发</p>
+<h4 id="Redis集群数据库"><a href="#Redis集群数据库" class="headerlink" title="Redis集群数据库"></a>Redis集群数据库</h4><p>单个Redis选择数据库用 Select，例如select 0 就是选择第一个数据库</p>
+<p>Redis集群目前无法做数据库选择，默认在0数据库</p>
+<h4 id="缓存雪崩"><a href="#缓存雪崩" class="headerlink" title="缓存雪崩"></a>缓存雪崩</h4><ul>
+<li><p>指缓存同一时间大面积失效（比如宕机？），后面所有请求都落在数据库上，造成数据库承受大量请求崩溃。</p>
+</li>
+<li><p>解决方案：</p>
+<ul>
+<li><p>设置备用服务器-集群的搭建（土豪的做法）</p>
+</li>
+<li><p>设置数据过期的时间为随机，这样可以防止同时失效</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="缓存穿透"><a href="#缓存穿透" class="headerlink" title="缓存穿透"></a>缓存穿透</h4><ul>
+<li><p>指缓存和数据库中<strong>都没有</strong>的数据，导致所有请求都落在数据库上，造成数据库短时间内承受大量请求崩溃</p>
+</li>
+<li><p>解决方案：</p>
+<ul>
+<li><p>缓存空对象：key-value可写成key-null</p>
+</li>
+<li><p>使用布隆过滤器（一脸蒙圈……）</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="缓存击穿"><a href="#缓存击穿" class="headerlink" title="缓存击穿"></a>缓存击穿</h4><ul>
+<li>缓存中没有<strong>但数据库中有</strong>的数据（一般是缓存时间到期）：比如某一条热搜，在其失效之后，新的缓存还未生成的时间段中，大量请求去数据库中查询，造成数据库压力过大。</li>
+<li>解决方案：<ul>
+<li>设置热点数据永不过期、或者较长时间不过期</li>
+<li>加互斥锁以保证在任意时刻，只能有一个线程访问该对象</li>
+</ul>
+</li>
+</ul>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><ul>
+<li><strong>非原创，系转载</strong>；原创链接：<a href="https://thinkwon.blog.csdn.net/article/details/103522351" target="_blank" rel="noopener">https://thinkwon.blog.csdn.net/article/details/103522351</a></li>
+<li>博主文章里面有些我尚未掌握，这篇文章只记录我学会的东西，方便日后复习。</li>
+<li>后续会添加一些项目实际运用代码，以及哨兵模式</li>
+</ul>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -460,7 +545,7 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://bianyueying.github.io/2020/04/30/hello/">https://bianyueying.github.io/2020/04/30/hello/</a>
+                    <a href="https://bianyueying.github.io/2020/06/23/redis-huan-cun/">https://bianyueying.github.io/2020/06/23/redis-huan-cun/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -498,8 +583,12 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Hexo/">
-                                    <span class="chip bg-color">Hexo</span>
+                                <a href="/tags/Java/">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+                            
+                                <a href="/tags/%E8%BD%AC%E8%BD%BD/">
+                                    <span class="chip bg-color">转载</span>
                                 </a>
                             
                         </div>
@@ -804,15 +893,73 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/05/04/dan-li-mo-shi/">
+                <a href="/2020/06/23/redis-huan-cun/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="设计模式">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Redis缓存">
+                        
+                        <span class="card-title">Redis缓存</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Redis知识点复习
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-23
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%90%8E%E7%AB%AF/" class="post-category">
+                                    后端
+                                </a>
+                            
+                            <a href="/categories/%E5%90%8E%E7%AB%AF/%E7%BC%93%E5%AD%98/" class="post-category">
+                                    缓存
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%BD%AC%E8%BD%BD/">
+                        <span class="chip bg-color">转载</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/05/08/gong-han-mo-shi/">
+                    <div class="card-image">
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="设计模式">
                         
                         <span class="card-title">设计模式</span>
                     </div>
@@ -820,13 +967,13 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            单例模式
+                            工厂模式
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-04
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-08
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -844,55 +991,6 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
                     
                     <a href="/tags/Java/">
                         <span class="chip bg-color">Java</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/04/30/hello/">
-                    <div class="card-image">
-                        
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            你好哇，很高兴见到你！
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-30
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    前端
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
                     </a>
                     
                 </div>
