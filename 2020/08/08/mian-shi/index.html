@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Redis缓存, 萌新求带">
+    <meta name="keywords" content="记一次面试经过, 萌新求带">
     <meta name="description" content="嗯哼">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Redis缓存 | 萌新求带</title>
+    <title>记一次面试经过 | 萌新求带</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -230,12 +230,12 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Redis缓存</h1>
+                    <h1 class="description center-align post-title">记一次面试经过</h1>
                 </div>
             </div>
         </div>
@@ -364,8 +364,12 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
                                 <span class="chip bg-color">Java</span>
                             </a>
                         
-                            <a href="/tags/%E8%BD%AC%E8%BD%BD/">
-                                <span class="chip bg-color">转载</span>
+                            <a href="/tags/%E5%8E%9F%E5%88%9B/">
+                                <span class="chip bg-color">原创</span>
+                            </a>
+                        
+                            <a href="/tags/Layui/">
+                                <span class="chip bg-color">Layui</span>
                             </a>
                         
                     </div>
@@ -380,8 +384,12 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
                                 后端
                             </a>
                         
-                            <a href="/categories/%E5%90%8E%E7%AB%AF/%E7%BC%93%E5%AD%98/" class="post-category">
-                                缓存
+                            <a href="/categories/%E5%90%8E%E7%AB%AF/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                前端
+                            </a>
+                        
+                            <a href="/categories/%E5%90%8E%E7%AB%AF/%E5%89%8D%E7%AB%AF/%E7%94%9F%E6%B4%BB%E5%88%86%E4%BA%AB/" class="post-category">
+                                生活分享
                             </a>
                         
                     </div>
@@ -393,7 +401,7 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-06-23
+                    2020-08-08
                 </div>
                 
 
@@ -402,14 +410,14 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    875
+                    2.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    8 分
                 </div>
                 
 
@@ -424,84 +432,160 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="Redis知识点复习"><a href="#Redis知识点复习" class="headerlink" title="Redis知识点复习"></a>Redis知识点复习</h3><h4 id="什么是Redis"><a href="#什么是Redis" class="headerlink" title="什么是Redis"></a>什么是Redis</h4><ul>
-<li><p>非关系型（NoSQL）键值对数据库</p>
+                <h3 id="记一次面试经过"><a href="#记一次面试经过" class="headerlink" title="记一次面试经过"></a>记一次面试经过</h3><h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>截止到8月初的今天，离我结束大学生涯已一月有余；在这一月的奔波流转中，年初的那种向往与憧憬已逐渐消磨殆尽，心思早已被找工作代替。这一月时间里，我投递了许多简历，不过大都石沉大海，反响平平，也去面试了十几家公司，但也都效果一般。这其中，有那种传统的直接面试、考察各种知识点的，也有去了先笔试，根据笔试结果再面试的，还有那种电话面试的，其实我内心特别特别不喜欢电话面试这种方式，私以为，面试是一种双向选择，这不是一两句话就能在电话里面说清楚的。</p>
+<p>接下来的文章，是我经历过的一次奇怪的面试：他给我发了一个小项目，规定三天内做出来，根据效果再判断是否面试（后来我去的时候发现如果做得项目他们满意的话，实际上你就已经过了，再次面试就是确定一下薪水什么的…），说实话，我还挺喜欢这种方式的，不过这种办法限制很大，它只能适用于面试我这种应届生，由于招聘者对刚出校门的大学生真实水平不清不楚，这种方式可以直截了当的过滤掉一部分，省去许多麻烦。</p>
+<p>下面是具体的项目要求了：</p>
+<h4 id="项目要求（请假演示）"><a href="#项目要求（请假演示）" class="headerlink" title="项目要求（请假演示）"></a>项目要求（请假演示）</h4><ol>
+<li>提供用户登录管理，用户数据可以在数据库中录入4,5个；不需要注册功能</li>
+<li>请假单填写提交，包括请假类型（年假、事假、病假）、请假时间段、请假原因</li>
+<li>请假审批，使用<strong>状态码</strong>方式实现<strong>请假流程流转</strong>，并可以在请假单中查看<strong>流转历史</strong>和<strong>处理人</strong>以及<strong>处理意见</strong></li>
+<li>流程：申请、一级审核、二级审核、三级审核，逐级流转，每个级别设置一个关联用户，该用户登录后可以对请假申请单进行操作，可以<strong>同意</strong>，也可以<strong>驳回</strong>，同意就到<strong>下一个节点</strong>，驳回直接到<strong>申请节点</strong></li>
+<li>当前登录人可以查看<strong>自己提交的请假单</strong>和<strong>自己可以审核的请假单</strong></li>
+<li>流转中的请假单不可编辑，只有处于申请节点的单据，<strong>申请人可以修改</strong></li>
+<li>界面可使用原生JSP和Jquery，推荐使用Layui实现</li>
+</ol>
+<h4 id="分析实施"><a href="#分析实施" class="headerlink" title="分析实施"></a>分析实施</h4><p>项目要求已经很清楚了，接下来就开始逐个分析实现吧！</p>
+<ol>
+<li>第一点：登录管理，写个登录界面，账号密码输入框，提交给后台验证，这个很简单</li>
+<li>第二点：通过一个表单实现，三种请假类型可直接在Select中写出，value可用1、2、3代替，时间段的话可用两个Layui的时间选择器实现，请假原因一个String类型就够用了</li>
+<li>第三点：可在请假单的类型中加一个字段status，根据status值的不同实现不同的流转；关于如何在请假单中查看流转历史和处理人意见，我使用了一张新表来实现，主要字段有：请假条id，处理人名字、处理人意见、处理结果等</li>
+<li>审核打算使用不同的数字（虽要求是状态码，偷偷使用数字他们也发现不了，嘻嘻，方便+1）实现，比如一个请假单只要写完，点击<strong>提交按钮</strong>后它的状态码就改成301(一级审核)，同意就二级（302），接着同意再三级（303），三级审核再同意后就改成<strong>审核通过</strong>（304）,这期间任一步骤不同意直接改成<strong>原始状态</strong>（300），只有当状态码为300时可以编辑更新请假单，其他状态码不能编辑。</li>
+<li>第五点：给每个请假条添加一个字段：user_id，可根据这层关系实现；</li>
+<li>第六点：前台可使用Layui框架的laytpl表达式根据一个表格其中的数据不同显示不同的效果，例如请假单.status=100就显示<strong>编辑按钮</strong>，如果请假单.status=101就显示<strong>不可编辑按钮</strong></li>
+<li>第七点：Layui是我比较熟悉且喜欢的一种前端框架，正合我意。</li>
+<li>关于如何让程序知道当前登录的用户是谁？这个程序里面我选择使用shiro实现：配置少，易使用</li>
+</ol>
+<h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><p>以下是一些在我回顾整个流程中认为值得注意的点：（只有核心代码）</p>
+<ol>
+<li><p>关于登录：使用Shiro控制登录，后续也可以很方便的获取到当前用户的所有信息</p>
+<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/login"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> BmlResult<span class="token operator">&lt;</span>Object<span class="token operator">></span> <span class="token function">login</span><span class="token punctuation">(</span>String username<span class="token punctuation">,</span> String password<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 获取实体</span>
+    Subject subject <span class="token operator">=</span> SecurityUtils<span class="token punctuation">.</span><span class="token function">getSubject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 创建令牌</span>
+    UsernamePasswordToken token <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">UsernamePasswordToken</span><span class="token punctuation">(</span>username<span class="token punctuation">,</span>password<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+        subject<span class="token punctuation">.</span><span class="token function">login</span><span class="token punctuation">(</span>token<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">BmlResult</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span><span class="token string">"登录成功"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">AuthenticationException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">BmlResult</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token number">202</span><span class="token punctuation">,</span><span class="token string">"登录失败"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
 </li>
-<li><p>可存储键和五种不同类型的值之间的映射，键只能是字符串，值有5种数据类型：字符串（String）、列表（list）、集合（set）、散列表（Hash）、有序集合（Zset）。</p>
+</ol>
+<ol start="2">
+<li>关于表单提交：该页面JS可以参考Layui的官方文档，十分详细，不再赘述。</li>
+</ol>
+<ol start="3">
+<li><p>查看<strong>我（当前用户）</strong>写的请假条：具体思路是，用户登录后，通过Shiro获取到该用户的ID，又因为每一个假条数据都有一个<strong>用户ID</strong>字段，所有根据这层关系可以查询到对应的数据。</p>
+<pre class=" language-java"><code class="language-java">Subject subject <span class="token operator">=</span> SecurityUtils<span class="token punctuation">.</span><span class="token function">getSubject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 获取到当前用户</span>
+User user<span class="token operator">=</span> <span class="token punctuation">(</span>User<span class="token punctuation">)</span> subject<span class="token punctuation">.</span><span class="token function">getPrincipal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// Mybatis-Plus创建查询条件语句</span>
+<span class="token keyword">new</span> <span class="token class-name">QueryWrapper</span><span class="token operator">&lt;</span>Note<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">eq</span><span class="token punctuation">(</span><span class="token string">"user_id"</span><span class="token punctuation">,</span>user<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>然后前台使用Ajax获取数据并展示即可。</p>
+</li>
+</ol>
+<ol start="4">
+<li><p>请假类型的判断：由于数据库中的类型字段是1、2、3，那么怎么才能在前台根据这些数字展示对应的年假、事假、病假呢？当Layui的表格初始化时，可使用JS表达式进行对应判断以解决：</p>
+<pre class=" language-java"><code class="language-java">cols<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token punctuation">{</span>field<span class="token operator">:</span> <span class="token string">'type'</span><span class="token punctuation">,</span> title<span class="token operator">:</span> <span class="token string">'请假类型'</span><span class="token punctuation">,</span> width<span class="token operator">:</span><span class="token number">100</span><span class="token punctuation">,</span><span class="token function">templet</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 获取到实体类的type属性 再进行判断</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>d<span class="token punctuation">.</span>type <span class="token operator">==</span><span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token string">'年假'</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>d<span class="token punctuation">.</span>type <span class="token operator">==</span><span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token string">'事假'</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>d<span class="token punctuation">.</span>type <span class="token operator">==</span><span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token string">'病假'</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token string">"未知类型"</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">}</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span></code></pre>
+</li>
+</ol>
+<ol start="5">
+<li><p>关于审核进度：</p>
+<pre class=" language-java"><code class="language-java"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>laytpl表达式可以根据实体类的属性值展示不同的按钮或文本，如下<span class="token operator">--</span><span class="token operator">></span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span>#  <span class="token keyword">if</span><span class="token punctuation">(</span>d<span class="token punctuation">.</span>noteStatus <span class="token operator">==</span><span class="token operator">=</span> <span class="token number">300</span><span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+ <span class="token operator">&lt;</span>a <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"layui-btn layui-btn-xs"</span> lay<span class="token operator">-</span>event<span class="token operator">=</span><span class="token string">"update"</span><span class="token operator">></span>被驳回请修改<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span>
+ <span class="token punctuation">{</span><span class="token punctuation">{</span>#  <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+
+<span class="token punctuation">{</span><span class="token punctuation">{</span>#  <span class="token keyword">if</span><span class="token punctuation">(</span>d<span class="token punctuation">.</span>noteStatus <span class="token operator">==</span><span class="token operator">=</span> <span class="token number">301</span><span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+ <span class="token operator">&lt;</span>a<span class="token operator">></span>一级审核中<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span>
+ <span class="token punctuation">{</span><span class="token punctuation">{</span>#  <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+
+<span class="token punctuation">{</span><span class="token punctuation">{</span>#  <span class="token keyword">if</span><span class="token punctuation">(</span>d<span class="token punctuation">.</span>noteStatus <span class="token operator">==</span><span class="token operator">=</span> <span class="token number">302</span><span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+ <span class="token operator">&lt;</span>a<span class="token operator">></span>二级审核中<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span>
+ <span class="token punctuation">{</span><span class="token punctuation">{</span>#  <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+
+<span class="token punctuation">{</span><span class="token punctuation">{</span>#  <span class="token keyword">if</span><span class="token punctuation">(</span>d<span class="token punctuation">.</span>noteStatus <span class="token operator">==</span><span class="token operator">=</span> <span class="token number">303</span><span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+ <span class="token operator">&lt;</span>a<span class="token operator">></span>三级审核中<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span>
+ <span class="token punctuation">{</span><span class="token punctuation">{</span>#  <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+
+<span class="token punctuation">{</span><span class="token punctuation">{</span>#  <span class="token keyword">if</span><span class="token punctuation">(</span>d<span class="token punctuation">.</span>noteStatus <span class="token operator">==</span><span class="token operator">=</span> <span class="token number">304</span><span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+ <span class="token operator">&lt;</span>a<span class="token operator">></span>审核已通过<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span>
+ <span class="token punctuation">{</span><span class="token punctuation">{</span>#  <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre>
+</li>
+</ol>
+<ol start="6">
+<li><p>关于layui时间组件的回显：这个时间回显功能属实浪费了我不少精力，总体就是，前台先拿到后台返回的时间，然后进行相关处理并调整，再把调整后的结果给对应的时间组件，让它们能正常显示（如果不处理，时间显示会异常）</p>
+<pre class=" language-java"><code class="language-java">success<span class="token operator">:</span> <span class="token function">function</span> <span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 处理时间（这段代码百度了好半天）</span>
+    var time <span class="token operator">=</span> data<span class="token punctuation">.</span>startDate<span class="token punctuation">;</span>
+    var d <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span>time<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    var year <span class="token operator">=</span> d<span class="token punctuation">.</span><span class="token function">getFullYear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    var month <span class="token operator">=</span> d<span class="token punctuation">.</span><span class="token function">getMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    month <span class="token operator">=</span> month <span class="token operator">&lt;</span> <span class="token number">10</span> <span class="token operator">?</span> <span class="token punctuation">(</span><span class="token string">'0'</span> <span class="token operator">+</span> month<span class="token punctuation">)</span> <span class="token operator">:</span> month<span class="token punctuation">;</span>
+    var day <span class="token operator">=</span> d<span class="token punctuation">.</span><span class="token function">getDate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    day <span class="token operator">=</span> day <span class="token operator">&lt;</span> <span class="token number">10</span> <span class="token operator">?</span> <span class="token punctuation">(</span><span class="token string">'0'</span><span class="token operator">+</span> day<span class="token punctuation">)</span> <span class="token operator">:</span> day<span class="token punctuation">;</span>
+    var start <span class="token operator">=</span> year <span class="token operator">+</span> <span class="token string">'-'</span> <span class="token operator">+</span> month <span class="token operator">+</span> <span class="token string">'-'</span> <span class="token operator">+</span> day<span class="token punctuation">;</span>
+
+    form<span class="token punctuation">.</span><span class="token function">val</span><span class="token punctuation">(</span><span class="token string">"example"</span><span class="token punctuation">,</span><span class="token punctuation">{</span>
+        <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+        <span class="token comment" spellcheck="true">// 表单回显处理后的时间</span>
+        <span class="token string">"startDate"</span><span class="token operator">:</span>start<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre>
+</li>
+</ol>
+<ol start="7">
+<li>流转历史：可在表单头上加一个工具栏，选中一条数据后，点击按钮弹出一个信息框，展示该假条的流转历史注意：我发现一个table不能同时放两个bar在表尾（表格的最后面)，我的解决是一个放在表尾，一个放在表的工具栏位置</li>
+</ol>
+<h4 id="成果展示"><a href="#成果展示" class="headerlink" title="成果展示"></a>成果展示</h4><ul>
+<li><p>登录页面：</p>
+<p><img src="https://s1.ax1x.com/2020/08/08/a5BlrT.png" alt="登录页面.png"></p>
 </li>
 </ul>
-<h4 id="Redis持久化"><a href="#Redis持久化" class="headerlink" title="Redis持久化"></a>Redis持久化</h4><p>​    持久化即是内存的数据写到磁盘中去，防止服务宕机，内存数据丢失</p>
-<h5 id="RDB：Redis-DataBase（默认方式）"><a href="#RDB：Redis-DataBase（默认方式）" class="headerlink" title="RDB：Redis DataBase（默认方式）"></a>RDB：Redis DataBase（默认方式）</h5><ul>
-<li>按照一定的时间间隔将内存中的数据以快照的方式保存到硬盘中，产生对应的数据文件为dump.rdb</li>
-<li>优点：<ul>
-<li>只有一个文件，方便持久化</li>
-<li>性能最大化：单独子进程来进行持久化，主线程不会进行任何IO操作，保证性能。</li>
-</ul>
-</li>
-<li>缺点：<ul>
-<li>安全性低：如果持久化时 redis 发生故障，会造成数据丢失（更适合数据要求不严谨时)</li>
-</ul>
-</li>
-</ul>
-<h5 id="AOF：Append-Only-File（需手动开启）"><a href="#AOF：Append-Only-File（需手动开启）" class="headerlink" title="AOF：Append Only File（需手动开启）"></a>AOF：Append Only File（需手动开启）</h5><ul>
-<li><p>将每次Redis执行的命令记录到单独的日志文件中，重启Redis时会根据该文件恢复数据。</p>
-</li>
-<li><p>两种方式同时开启时，数据恢复Redis会优先选择AOF恢复</p>
-</li>
-<li><p>优点：</p>
 <ul>
-<li>数据安全：每执行一次命令就可以记录操作一次。</li>
-</ul>
+<li><p>请假条书写页面：</p>
+<p><img src="https://s1.ax1x.com/2020/08/08/a5BVaQ.png" alt="表单页面.png"></p>
 </li>
-<li><p>缺点：</p>
+</ul>
 <ul>
-<li><p>因为要记录所有执行命令，所以文件要比rdb大，恢复速度慢</p>
-</li>
-<li><p>数据集大的时候，比rdb启动效率低。</p>
-</li>
-</ul>
+<li><p>查看我写的请假条，如图所示，假条类型有三种，假条在审核的过程中为<strong>不可编辑状态</strong>，只有在被驳回时才显示修改按钮</p>
+<p><a href="https://imgchr.com/i/a5Bu2q" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/08/08/a5Bu2q.png" alt="我的假条.png"></a></p>
 </li>
 </ul>
-<h4 id="Redis主从架构"><a href="#Redis主从架构" class="headerlink" title="Redis主从架构"></a>Redis主从架构</h4><p>主从架构：一主多从，主负责写，并将数据复制到其他的从节点，从负责读。所有的读请求全部走从节点，这样易实现水平扩容，支撑读高并发</p>
-<h4 id="Redis集群数据库"><a href="#Redis集群数据库" class="headerlink" title="Redis集群数据库"></a>Redis集群数据库</h4><p>单个Redis选择数据库用 Select，例如select 0 就是选择第一个数据库</p>
-<p>Redis集群目前无法做数据库选择，默认在0数据库</p>
-<h4 id="缓存雪崩"><a href="#缓存雪崩" class="headerlink" title="缓存雪崩"></a>缓存雪崩</h4><ul>
-<li><p>指缓存同一时间大面积失效（比如宕机？），后面所有请求都落在数据库上，造成数据库承受大量请求崩溃。</p>
-</li>
-<li><p>解决方案：</p>
 <ul>
-<li><p>设置备用服务器-集群的搭建（土豪的做法）</p>
-</li>
-<li><p>设置数据过期的时间为随机，这样可以防止同时失效</p>
-</li>
-</ul>
+<li><p>更新假条，点击修改按钮，弹出修改框（注意时间，如图是处理后的时间，如果不处理就会显示异常）</p>
+<p><a href="https://imgchr.com/i/a5BmPs" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/08/08/a5BmPs.png" alt="修改框.png"></a></p>
 </li>
 </ul>
-<h4 id="缓存穿透"><a href="#缓存穿透" class="headerlink" title="缓存穿透"></a>缓存穿透</h4><ul>
-<li><p>指缓存和数据库中<strong>都没有</strong>的数据，导致所有请求都落在数据库上，造成数据库短时间内承受大量请求崩溃</p>
-</li>
-<li><p>解决方案：</p>
 <ul>
-<li><p>缓存空对象：key-value可写成key-null</p>
-</li>
-<li><p>使用布隆过滤器（一脸蒙圈……）</p>
-</li>
-</ul>
+<li><p>流转历史，选中一条数据，点击上方的<strong>获取流转历史按钮</strong>，就会弹出如图所示的信息框：</p>
+<p><a href="https://imgchr.com/i/a5BEVg" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/08/08/a5BEVg.png" alt="历史.png"></a></p>
 </li>
 </ul>
-<h4 id="缓存击穿"><a href="#缓存击穿" class="headerlink" title="缓存击穿"></a>缓存击穿</h4><ul>
-<li>缓存中没有<strong>但数据库中有</strong>的数据（一般是缓存时间到期）：比如某一条热搜，在其失效之后，新的缓存还未生成的时间段中，大量请求去数据库中查询，造成数据库压力过大。</li>
-<li>解决方案：<ul>
-<li>设置热点数据永不过期、或者较长时间不过期</li>
-<li>加互斥锁以保证在任意时刻，只能有一个线程访问该对象</li>
-</ul>
+<ul>
+<li><p>当前用户可以审核的：</p>
+<p><img src="https://s1.ax1x.com/2020/08/08/a5BnGn.png" alt="需要我审核的.png"></p>
 </li>
 </ul>
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><ul>
-<li><strong>非原创，系转载</strong>；原创链接：<a href="https://thinkwon.blog.csdn.net/article/details/103522351" target="_blank" rel="noopener">https://thinkwon.blog.csdn.net/article/details/103522351</a></li>
-<li>博主文章里面有些我尚未掌握，这篇文章只记录我学会的东西，方便日后复习。</li>
-<li>后续会添加一些项目实际运用代码，以及哨兵模式</li>
-</ul>
+<h4 id="面试后续"><a href="#面试后续" class="headerlink" title="面试后续"></a>面试后续</h4><p>总体来说这是一个比较简单的项目，年后在家时间充沛，花费了一天半时间做出来就发给他们了，接着面试之后也通过了。当时十分开心，不过后来因为他们的缘故（我可以理直气壮的说不怪我），我去了一天大概了解了一下公司情况后就不再去了，这个面试也算告一段落了。</p>
+<p>今天的我，跌跌撞撞，总算要暂时安定下来了……</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -545,7 +629,7 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://bianyueying.github.io/2020/06/23/redis-huan-cun/">https://bianyueying.github.io/2020/06/23/redis-huan-cun/</a>
+                    <a href="https://bianyueying.github.io/2020/08/08/mian-shi/">https://bianyueying.github.io/2020/08/08/mian-shi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -587,8 +671,12 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
                                     <span class="chip bg-color">Java</span>
                                 </a>
                             
-                                <a href="/tags/%E8%BD%AC%E8%BD%BD/">
-                                    <span class="chip bg-color">转载</span>
+                                <a href="/tags/%E5%8E%9F%E5%88%9B/">
+                                    <span class="chip bg-color">原创</span>
+                                </a>
+                            
+                                <a href="/tags/Layui/">
+                                    <span class="chip bg-color">Layui</span>
                                 </a>
                             
                         </div>
@@ -893,28 +981,29 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/07/19/echarts/">
+                <a href="/2020/08/08/mian-shi/">
                     <div class="card-image">
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Echarts">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="记一次面试经过">
                         
-                        <span class="card-title">Echarts</span>
+                        <span class="card-title">记一次面试经过</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Spring Boot + Echarts的简单实现
+                            请假条演示
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-19
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-08
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -923,15 +1012,32 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
                                     后端
                                 </a>
                             
+                            <a href="/categories/%E5%90%8E%E7%AB%AF/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
+                                </a>
+                            
+                            <a href="/categories/%E5%90%8E%E7%AB%AF/%E5%89%8D%E7%AB%AF/%E7%94%9F%E6%B4%BB%E5%88%86%E4%BA%AB/" class="post-category">
+                                    生活分享
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
                     <a href="/tags/Java/">
                         <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%8E%9F%E5%88%9B/">
+                        <span class="chip bg-color">原创</span>
+                    </a>
+                    
+                    <a href="/tags/Layui/">
+                        <span class="chip bg-color">Layui</span>
                     </a>
                     
                 </div>
@@ -945,23 +1051,24 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/05/08/gong-han-mo-shi/">
+                <a href="/2020/07/26/editor/">
                     <div class="card-image">
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="设计模式">
                         
-                        <span class="card-title">设计模式</span>
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Editor.md">
+                        
+                        <span class="card-title">Editor.md</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            工厂模式
+                            SpringBoot集成Editor.md
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-08
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-26
                             </span>
                         <span class="publish-author">
                             
@@ -969,6 +1076,10 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
                             
                             <a href="/categories/%E5%90%8E%E7%AB%AF/" class="post-category">
                                     后端
+                                </a>
+                            
+                            <a href="/categories/%E5%90%8E%E7%AB%AF/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/" class="post-category">
+                                    文本编辑器
                                 </a>
                             
                             
@@ -980,6 +1091,14 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
                     
                     <a href="/tags/Java/">
                         <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%8E%9F%E5%88%9B/">
+                        <span class="chip bg-color">原创</span>
+                    </a>
+                    
+                    <a href="/tags/Layui/">
+                        <span class="chip bg-color">Layui</span>
                     </a>
                     
                 </div>
