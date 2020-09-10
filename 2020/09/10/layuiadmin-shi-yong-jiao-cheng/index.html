@@ -427,11 +427,11 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
                 <h1 id="SpringBoot-LayuiAdmin的简单使用"><a href="#SpringBoot-LayuiAdmin的简单使用" class="headerlink" title="SpringBoot+LayuiAdmin的简单使用"></a>SpringBoot+LayuiAdmin的简单使用</h1><p>分享一下SpringBoot集成LayuiAdmin的一些心得体会，刚开始网上找了半天没找到集成教程，鼓捣了一阵只好自己上手了.</p>
 <h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="1、准备一份LayuiAdmin"><a href="#1、准备一份LayuiAdmin" class="headerlink" title="1、准备一份LayuiAdmin"></a>1、准备一份LayuiAdmin</h3><p>源码压缩包解压后进入dist文件夹，通常该文件夹有两个子文件夹：layuiadmin和views；别问我压缩包怎么弄，问就是自己悟……</p>
 <h3 id="2、创建项目"><a href="#2、创建项目" class="headerlink" title="2、创建项目"></a>2、创建项目</h3><p>创建一个SpringBoot项目，勾选依赖的时候别忘了选Spring Web和Thymeleaf，当然，你也可以后续再添加；把一些不需要的文件删除，具体略…… 如下图：</p>
-<p><img src="https://s1.ax1x.com/2020/09/10/wY3ju6.png" alt="wY3ju6.png"></p>
+<p><img src="https://s1.ax1x.com/2020/09/10/wY3ju6.png" alt="项目初始.png"></p>
 <h3 id="3、配置文件"><a href="#3、配置文件" class="headerlink" title="3、配置文件"></a>3、配置文件</h3><p>在<strong>application.properties</strong>文件中添加如下配置，以过滤静态资源文件</p>
 <pre class=" language-java"><code class="language-java">spring<span class="token punctuation">.</span>mvc<span class="token punctuation">.</span><span class="token keyword">static</span><span class="token operator">-</span>path<span class="token operator">-</span>pattern<span class="token operator">=</span><span class="token operator">/</span><span class="token keyword">static</span><span class="token operator">/</span><span class="token operator">*</span><span class="token operator">*</span></code></pre>
 <h3 id="4、导入静态资源"><a href="#4、导入静态资源" class="headerlink" title="4、导入静态资源"></a>4、导入静态资源</h3><p>将layuiadmin文件夹整个复制到static文件夹下，如图所示：</p>
-<p><img src="https://s1.ax1x.com/2020/09/10/wY3Ojx.png" alt="wY3Ojx.png"></p>
+<p><img src="https://s1.ax1x.com/2020/09/10/wY3Ojx.png" alt="导入静态资源.png"></p>
 <p>注意：json文件下都是一些模拟数据，可以删除该文件夹；其它尽量不要删除</p>
 <p>附赠一份LayuiAdmin目录详解：<a href="https://blog.csdn.net/sinat_35656188/article/details/100551610" target="_blank" rel="noopener">https://blog.csdn.net/sinat_35656188/article/details/100551610</a></p>
 <h3 id="5、创建页面"><a href="#5、创建页面" class="headerlink" title="5、创建页面"></a>5、创建页面</h3><p>将views文件夹下的index.html文件复制到项目的<strong>templates</strong>文件夹下</p>
@@ -464,7 +464,7 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre>
 <h3 id="7、运行测试"><a href="#7、运行测试" class="headerlink" title="7、运行测试"></a>7、运行测试</h3><p>启动项目，效果图如下：</p>
-<p><img src="https://s1.ax1x.com/2020/09/10/wY3Lg1.png" alt="wY3Lg1.png"></p>
+<p><img src="https://s1.ax1x.com/2020/09/10/wY3Lg1.png" alt="效果图.png"></p>
 <h3 id="8、程序扩展"><a href="#8、程序扩展" class="headerlink" title="8、程序扩展"></a>8、程序扩展</h3><p>上一步可以看出，整个系统父页面已能正常显示，子页面加载出错；下面就以控制台、主页一、主页二这三个来演示如何扩展程序：</p>
 <ol>
 <li><p>在index.html中找到这三个链接，更改<code>lay-href</code>如下：</p>
@@ -503,7 +503,7 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
 <li><p>在templates文件夹下新建三个html文件，内容随意，注意名字要和控制方法里面的返回的视图值保持一致</p>
 </li>
 <li><p>运行项目，实现效果如下：</p>
-<p><img src="https://s1.ax1x.com/2020/09/10/wYYsrq.gif" alt="wYYsrq.gif"></p>
+<p><img src="https://s1.ax1x.com/2020/09/10/wYYsrq.gif" alt="完整效果图.gif"></p>
 </li>
 </ol>
 <ol start="5">
