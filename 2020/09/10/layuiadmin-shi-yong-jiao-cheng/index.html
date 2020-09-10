@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Redis缓存, 萌新求带">
+    <meta name="keywords" content="SpringBoot+LayuiAdmin, 萌新求带">
     <meta name="description" content="嗯哼">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Redis缓存 | 萌新求带</title>
+    <title>SpringBoot+LayuiAdmin | 萌新求带</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -230,12 +230,12 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Redis缓存</h1>
+                    <h1 class="description center-align post-title">SpringBoot+LayuiAdmin</h1>
                 </div>
             </div>
         </div>
@@ -364,8 +364,12 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
                                 <span class="chip bg-color">Java</span>
                             </a>
                         
-                            <a href="/tags/%E8%BD%AC%E8%BD%BD/">
-                                <span class="chip bg-color">转载</span>
+                            <a href="/tags/%E5%8E%9F%E5%88%9B/">
+                                <span class="chip bg-color">原创</span>
+                            </a>
+                        
+                            <a href="/tags/LayuiAdmin/">
+                                <span class="chip bg-color">LayuiAdmin</span>
                             </a>
                         
                     </div>
@@ -376,12 +380,8 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%90%8E%E7%AB%AF/" class="post-category">
-                                后端
-                            </a>
-                        
-                            <a href="/categories/%E5%90%8E%E7%AB%AF/%E7%BC%93%E5%AD%98/" class="post-category">
-                                缓存
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                前端
                             </a>
                         
                     </div>
@@ -393,7 +393,7 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-06-23
+                    2020-09-10
                 </div>
                 
 
@@ -402,7 +402,7 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    875
+                    832
                 </div>
                 
 
@@ -424,84 +424,92 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="Redis知识点复习"><a href="#Redis知识点复习" class="headerlink" title="Redis知识点复习"></a>Redis知识点复习</h3><h4 id="什么是Redis"><a href="#什么是Redis" class="headerlink" title="什么是Redis"></a>什么是Redis</h4><ul>
-<li><p>非关系型（NoSQL）键值对数据库</p>
+                <h1 id="SpringBoot-LayuiAdmin的简单使用"><a href="#SpringBoot-LayuiAdmin的简单使用" class="headerlink" title="SpringBoot+LayuiAdmin的简单使用"></a>SpringBoot+LayuiAdmin的简单使用</h1><p>分享一下SpringBoot集成LayuiAdmin的一些心得体会，刚开始网上找了半天没找到集成教程，鼓捣了一阵只好自己上手了.</p>
+<h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="1、准备一份LayuiAdmin"><a href="#1、准备一份LayuiAdmin" class="headerlink" title="1、准备一份LayuiAdmin"></a>1、准备一份LayuiAdmin</h3><p>源码压缩包解压后进入dist文件夹，通常该文件夹有两个子文件夹：layuiadmin和views；别问我压缩包怎么弄，问就是自己悟……</p>
+<h3 id="2、创建项目"><a href="#2、创建项目" class="headerlink" title="2、创建项目"></a>2、创建项目</h3><p>创建一个SpringBoot项目，勾选依赖的时候别忘了选Spring Web和Thymeleaf，当然，你也可以后续再添加；把一些不需要的文件删除，具体略…… 如下图：</p>
+<p><img src="https://s1.ax1x.com/2020/09/10/wY3ju6.png" alt="wY3ju6.png"></p>
+<h3 id="3、配置文件"><a href="#3、配置文件" class="headerlink" title="3、配置文件"></a>3、配置文件</h3><p>在<strong>application.properties</strong>文件中添加如下配置，以过滤静态资源文件</p>
+<pre class=" language-java"><code class="language-java">spring<span class="token punctuation">.</span>mvc<span class="token punctuation">.</span><span class="token keyword">static</span><span class="token operator">-</span>path<span class="token operator">-</span>pattern<span class="token operator">=</span><span class="token operator">/</span><span class="token keyword">static</span><span class="token operator">/</span><span class="token operator">*</span><span class="token operator">*</span></code></pre>
+<h3 id="4、导入静态资源"><a href="#4、导入静态资源" class="headerlink" title="4、导入静态资源"></a>4、导入静态资源</h3><p>将layuiadmin文件夹整个复制到static文件夹下，如图所示：</p>
+<p><img src="https://s1.ax1x.com/2020/09/10/wY3Ojx.png" alt="wY3Ojx.png"></p>
+<p>注意：json文件下都是一些模拟数据，可以删除该文件夹；其它尽量不要删除</p>
+<p>附赠一份LayuiAdmin目录详解：<a href="https://blog.csdn.net/sinat_35656188/article/details/100551610" target="_blank" rel="noopener">https://blog.csdn.net/sinat_35656188/article/details/100551610</a></p>
+<h3 id="5、创建页面"><a href="#5、创建页面" class="headerlink" title="5、创建页面"></a>5、创建页面</h3><p>将views文件夹下的index.html文件复制到项目的<strong>templates</strong>文件夹下</p>
+<p>改动如下：</p>
+<pre class=" language-html"><code class="language-html">1、引入thymeleaf空间
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">xmlns:</span>th</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://www.thymeleaf.org<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+
+    2、将原生的引入资源改成如下方式(这样写比较规范，原生的也可以引入，但需注意路径正确)
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">th:</span>href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>@{/static/layuiadmin/layui/css/layui.css}<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">th:</span>href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>@{/static/layuiadmin/style/admin.css}<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name"><span class="token namespace">th:</span>src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>@{/static/layuiadmin/layui/layui.js}<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+
+    3、改动静态资源文件夹
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
+        layui<span class="token punctuation">.</span><span class="token function">config</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+          <span class="token comment" spellcheck="true">//静态资源所在路径</span>
+          base<span class="token punctuation">:</span> <span class="token string">'../layuiadmin/'</span>   <span class="token operator">--</span><span class="token operator">-</span><span class="token operator">></span>改成 <span class="token string">'static/layuiadmin/'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">extend</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+          <span class="token comment" spellcheck="true">//主入口模块</span>
+          index<span class="token punctuation">:</span> <span class="token string">'lib/index'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token string">'index'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>  </code></pre>
+<h3 id="6、页面跳转"><a href="#6、页面跳转" class="headerlink" title="6、页面跳转"></a>6、页面跳转</h3><p>在启动类同级或以下写个控制类，跳转到该页面</p>
+<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@Controller</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">PagesController</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/index"</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> String <span class="token function">index</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">"index"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<h3 id="7、运行测试"><a href="#7、运行测试" class="headerlink" title="7、运行测试"></a>7、运行测试</h3><p>启动项目，效果图如下：</p>
+<p><img src="https://s1.ax1x.com/2020/09/10/wY3Lg1.png" alt="wY3Lg1.png"></p>
+<h3 id="8、程序扩展"><a href="#8、程序扩展" class="headerlink" title="8、程序扩展"></a>8、程序扩展</h3><p>上一步可以看出，整个系统父页面已能正常显示，子页面加载出错；下面就以控制台、主页一、主页二这三个来演示如何扩展程序：</p>
+<ol>
+<li><p>在index.html中找到这三个链接，更改<code>lay-href</code>如下：</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dl</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>layui-nav-child<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dd</span> <span class="token attr-name">data-name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>console<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>layui-this<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">lay-href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>admin/console<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>控制台<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dd</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dd</span> <span class="token attr-name">data-name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>console<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">lay-href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>admin/one<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>主页一<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dd</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dd</span> <span class="token attr-name">data-name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>console<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">lay-href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>admin/two<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>主页二<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dd</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dl</span><span class="token punctuation">></span></span></code></pre>
 </li>
-<li><p>可存储键和五种不同类型的值之间的映射，键只能是字符串，值有5种数据类型：字符串（String）、列表（list）、集合（set）、散列表（Hash）、有序集合（Zset）。</p>
+</ol>
+<ol start="2">
+<li><p>在PagesController类中添加跳转控制</p>
+<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"admin/console"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> String <span class="token function">console</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">"console"</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"admin/one"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> String <span class="token function">one</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">"one"</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"admin/two"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> String <span class="token function">two</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">"two"</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
 </li>
-</ul>
-<h4 id="Redis持久化"><a href="#Redis持久化" class="headerlink" title="Redis持久化"></a>Redis持久化</h4><p>​    持久化即是内存的数据写到磁盘中去，防止服务宕机，内存数据丢失</p>
-<h5 id="RDB：Redis-DataBase（默认方式）"><a href="#RDB：Redis-DataBase（默认方式）" class="headerlink" title="RDB：Redis DataBase（默认方式）"></a>RDB：Redis DataBase（默认方式）</h5><ul>
-<li>按照一定的时间间隔将内存中的数据以快照的方式保存到硬盘中，产生对应的数据文件为dump.rdb</li>
-<li>优点：<ul>
-<li>只有一个文件，方便持久化</li>
-<li>性能最大化：单独子进程来进行持久化，主线程不会进行任何IO操作，保证性能。</li>
-</ul>
+</ol>
+<ol start="3">
+<li><p>在templates文件夹下新建三个html文件，内容随意，注意名字要和控制方法里面的返回的视图值保持一致</p>
 </li>
-<li>缺点：<ul>
-<li>安全性低：如果持久化时 redis 发生故障，会造成数据丢失（更适合数据要求不严谨时)</li>
-</ul>
+<li><p>运行项目，实现效果如下：</p>
+<p><img src="https://s1.ax1x.com/2020/09/10/wYYsrq.gif" alt="wYYsrq.gif"></p>
 </li>
-</ul>
-<h5 id="AOF：Append-Only-File（需手动开启）"><a href="#AOF：Append-Only-File（需手动开启）" class="headerlink" title="AOF：Append Only File（需手动开启）"></a>AOF：Append Only File（需手动开启）</h5><ul>
-<li><p>将每次Redis执行的命令记录到单独的日志文件中，重启Redis时会根据该文件恢复数据。</p>
-</li>
-<li><p>两种方式同时开启时，数据恢复Redis会优先选择AOF恢复</p>
-</li>
-<li><p>优点：</p>
-<ul>
-<li>数据安全：每执行一次命令就可以记录操作一次。</li>
-</ul>
-</li>
-<li><p>缺点：</p>
-<ul>
-<li><p>因为要记录所有执行命令，所以文件要比rdb大，恢复速度慢</p>
-</li>
-<li><p>数据集大的时候，比rdb启动效率低。</p>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="Redis主从架构"><a href="#Redis主从架构" class="headerlink" title="Redis主从架构"></a>Redis主从架构</h4><p>主从架构：一主多从，主负责写，并将数据复制到其他的从节点，从负责读。所有的读请求全部走从节点，这样易实现水平扩容，支撑读高并发</p>
-<h4 id="Redis集群数据库"><a href="#Redis集群数据库" class="headerlink" title="Redis集群数据库"></a>Redis集群数据库</h4><p>单个Redis选择数据库用 Select，例如select 0 就是选择第一个数据库</p>
-<p>Redis集群目前无法做数据库选择，默认在0数据库</p>
-<h4 id="缓存雪崩"><a href="#缓存雪崩" class="headerlink" title="缓存雪崩"></a>缓存雪崩</h4><ul>
-<li><p>指缓存同一时间大面积失效（比如宕机？），后面所有请求都落在数据库上，造成数据库承受大量请求崩溃。</p>
-</li>
-<li><p>解决方案：</p>
-<ul>
-<li><p>设置备用服务器-集群的搭建（土豪的做法）</p>
-</li>
-<li><p>设置数据过期的时间为随机，这样可以防止同时失效</p>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="缓存穿透"><a href="#缓存穿透" class="headerlink" title="缓存穿透"></a>缓存穿透</h4><ul>
-<li><p>指缓存和数据库中<strong>都没有</strong>的数据，导致所有请求都落在数据库上，造成数据库短时间内承受大量请求崩溃</p>
-</li>
-<li><p>解决方案：</p>
-<ul>
-<li><p>缓存空对象：key-value可写成key-null</p>
-</li>
-<li><p>使用布隆过滤器（一脸蒙圈……）</p>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="缓存击穿"><a href="#缓存击穿" class="headerlink" title="缓存击穿"></a>缓存击穿</h4><ul>
-<li>缓存中没有<strong>但数据库中有</strong>的数据（一般是缓存时间到期）：比如某一条热搜，在其失效之后，新的缓存还未生成的时间段中，大量请求去数据库中查询，造成数据库压力过大。</li>
-<li>解决方案：<ul>
-<li>设置热点数据永不过期、或者较长时间不过期</li>
-<li>加互斥锁以保证在任意时刻，只能有一个线程访问该对象</li>
-</ul>
-</li>
-</ul>
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><ul>
-<li><strong>非原创，系转载</strong>；原创链接：<a href="https://thinkwon.blog.csdn.net/article/details/103522351" target="_blank" rel="noopener">https://thinkwon.blog.csdn.net/article/details/103522351</a></li>
-<li>博主文章里面有些我尚未掌握，这篇文章只记录我学会的东西，方便日后复习。</li>
-<li>后续会添加一些项目实际运用代码，以及哨兵模式</li>
-</ul>
+</ol>
+<ol start="5">
+<li>神功已经练成，尽情发挥吧(&gt;_&lt;)!!!</li>
+</ol>
+<h3 id="9、总结"><a href="#9、总结" class="headerlink" title="9、总结"></a>9、总结</h3><p>私认为，LayuiAdmin算是一个对我这种后端比较友好的框架，只需要很简单的配置就能实现很棒的页面效果，总算不用每次都很痛苦的写页面布局了，想想那些复杂的CSS我脑子都大了……</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -545,7 +553,7 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://bianyueying.github.io/2020/06/23/redis-huan-cun/">https://bianyueying.github.io/2020/06/23/redis-huan-cun/</a>
+                    <a href="https://bianyueying.github.io/2020/09/10/layuiadmin-shi-yong-jiao-cheng/">https://bianyueying.github.io/2020/09/10/layuiadmin-shi-yong-jiao-cheng/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -587,8 +595,12 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
                                     <span class="chip bg-color">Java</span>
                                 </a>
                             
-                                <a href="/tags/%E8%BD%AC%E8%BD%BD/">
-                                    <span class="chip bg-color">转载</span>
+                                <a href="/tags/%E5%8E%9F%E5%88%9B/">
+                                    <span class="chip bg-color">原创</span>
+                                </a>
+                            
+                                <a href="/tags/LayuiAdmin/">
+                                    <span class="chip bg-color">LayuiAdmin</span>
                                 </a>
                             
                         </div>
@@ -893,45 +905,55 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/07/19/echarts/">
+                <a href="/2020/09/10/layuiadmin-shi-yong-jiao-cheng/">
                     <div class="card-image">
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Echarts">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="SpringBoot+LayuiAdmin">
                         
-                        <span class="card-title">Echarts</span>
+                        <span class="card-title">SpringBoot+LayuiAdmin</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Spring Boot + Echarts的简单实现
+                            SpringBoot集成LayuiAdmin的简单使用
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-19
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-10
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%90%8E%E7%AB%AF/" class="post-category">
-                                    后端
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
                     <a href="/tags/Java/">
                         <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%8E%9F%E5%88%9B/">
+                        <span class="chip bg-color">原创</span>
+                    </a>
+                    
+                    <a href="/tags/LayuiAdmin/">
+                        <span class="chip bg-color">LayuiAdmin</span>
                     </a>
                     
                 </div>
@@ -945,23 +967,23 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/05/08/gong-han-mo-shi/">
+                <a href="/2020/08/08/mian-shi/">
                     <div class="card-image">
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="设计模式">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="记一次面试经过">
                         
-                        <span class="card-title">设计模式</span>
+                        <span class="card-title">记一次面试经过</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            工厂模式
+                            请假条演示
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-08
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-08
                             </span>
                         <span class="publish-author">
                             
@@ -969,6 +991,14 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
                             
                             <a href="/categories/%E5%90%8E%E7%AB%AF/" class="post-category">
                                     后端
+                                </a>
+                            
+                            <a href="/categories/%E5%90%8E%E7%AB%AF/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
+                                </a>
+                            
+                            <a href="/categories/%E5%90%8E%E7%AB%AF/%E5%89%8D%E7%AB%AF/%E7%94%9F%E6%B4%BB%E5%88%86%E4%BA%AB/" class="post-category">
+                                    生活分享
                                 </a>
                             
                             
@@ -980,6 +1010,14 @@ document.addEventListener("visibilitychange", function () { document.hidden ? (d
                     
                     <a href="/tags/Java/">
                         <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%8E%9F%E5%88%9B/">
+                        <span class="chip bg-color">原创</span>
+                    </a>
+                    
+                    <a href="/tags/Layui/">
+                        <span class="chip bg-color">Layui</span>
                     </a>
                     
                 </div>
